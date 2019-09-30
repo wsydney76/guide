@@ -1,8 +1,8 @@
 # Guide Plugin
 
-TBD.
+Hint: Moved from module to plugin, as a temporary workaround before porting all of this to
+the 'official' guide plugin.
 
-/sh
 
 # Setup Guide
 
@@ -10,6 +10,7 @@ TBD.
 
 Required Plugins:
 
+* Redactor Rich Text Editor
 * Field Manager. Can be uninstalled after importing the field definitions.
 
 ## Fields
