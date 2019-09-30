@@ -1,0 +1,17 @@
+{% set guide = craft.entries.section('guide').slug(entry.section.handle).one() %}
+
+{% if guide %}
+    <div class="meta">
+        {% set guideUrl = cpUrl("guide-ajax/#{guide.slug}") %}
+
+        {% embed 'wsguide/modalbutton_ajax.twig' with {id:'showguide', caption:'Guide', url: guideUrl } %}
+            {% block content %}
+                Loading...
+            {% endblock %}
+        {% endembed %}
+
+    </div>
+
+{% endif %}
+
+

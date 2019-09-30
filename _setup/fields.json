@@ -1,0 +1,283 @@
+[
+  {
+    "name": "Auf der \u00dcbersichtsseite anzeigen?",
+    "handle": "showInDashboard",
+    "instructions": "",
+    "required": null,
+    "translationMethod": "none",
+    "translationKeyFormat": null,
+    "type": "craft\\fields\\Lightswitch",
+    "settings": {
+      "default": ""
+    }
+  },
+  {
+    "name": "Guide Content",
+    "handle": "guideContent",
+    "instructions": "Wenn leer, muss eine twig\/md-Datei mit dem Namen des slugs existieren, die dann angezeigt wird.",
+    "required": null,
+    "translationMethod": "site",
+    "translationKeyFormat": null,
+    "type": "craft\\fields\\Matrix",
+    "settings": {
+      "minBlocks": "",
+      "maxBlocks": "",
+      "contentTable": "{{%matrixcontent_guidecontent}}",
+      "propagationMethod": "none",
+      "blockTypes": {
+        "new1": {
+          "name": "Heading",
+          "handle": "heading",
+          "fields": {
+            "new1": {
+              "name": "Text",
+              "handle": "text",
+              "required": 1,
+              "instructions": "",
+              "translationMethod": "site",
+              "translationKeyFormat": null,
+              "type": "craft\\fields\\PlainText",
+              "typesettings": {
+                "placeholder": "",
+                "code": "",
+                "multiline": "",
+                "initialRows": 4,
+                "charLimit": 100,
+                "columnType": "string"
+              }
+            },
+            "new2": {
+              "name": "Tag",
+              "handle": "tag",
+              "required": 0,
+              "instructions": "",
+              "translationMethod": "site",
+              "translationKeyFormat": null,
+              "type": "craft\\fields\\Dropdown",
+              "typesettings": {
+                "optgroups": true,
+                "options": [
+                  {
+                    "label": "H2",
+                    "value": "h2",
+                    "default": 1
+                  },
+                  {
+                    "label": "H3",
+                    "value": "h3",
+                    "default": ""
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "new2": {
+          "name": "Text",
+          "handle": "text",
+          "fields": {
+            "new1": {
+              "name": "Text",
+              "handle": "text",
+              "required": 0,
+              "instructions": "",
+              "translationMethod": "site",
+              "translationKeyFormat": null,
+              "type": "craft\\redactor\\Field",
+              "typesettings": {
+                "redactorConfig": "",
+                "purifierConfig": "",
+                "cleanupHtml": true,
+                "removeInlineStyles": 1,
+                "removeEmptyTags": 1,
+                "removeNbsp": 1,
+                "purifyHtml": 1,
+                "columnType": "text",
+                "availableVolumes": [
+                  "d6e90518-f7a8-4bac-b5bf-77f62d8e5fcf"
+                ],
+                "availableTransforms": "*"
+              }
+            }
+          }
+        },
+        "new3": {
+          "name": "Image",
+          "handle": "image",
+          "fields": {
+            "new1": {
+              "name": "Image",
+              "handle": "image",
+              "required": 0,
+              "instructions": "",
+              "translationMethod": "site",
+              "translationKeyFormat": null,
+              "type": "craft\\fields\\Assets",
+              "typesettings": {
+                "useSingleFolder": "",
+                "defaultUploadLocationSource": "volume:d6e90518-f7a8-4bac-b5bf-77f62d8e5fcf",
+                "defaultUploadLocationSubpath": "",
+                "singleUploadLocationSource": "volume:d6e90518-f7a8-4bac-b5bf-77f62d8e5fcf",
+                "singleUploadLocationSubpath": "",
+                "restrictFiles": 1,
+                "allowedKinds": [
+                  "image"
+                ],
+                "sources": [
+                  "volume:d6e90518-f7a8-4bac-b5bf-77f62d8e5fcf"
+                ],
+                "source": null,
+                "targetSiteId": null,
+                "viewMode": "large",
+                "limit": 1,
+                "selectionLabel": "Select an image",
+                "localizeRelations": "",
+                "validateRelatedElements": ""
+              }
+            }
+          }
+        },
+        "new4": {
+          "name": "Grid",
+          "handle": "grid",
+          "fields": {
+            "new1": {
+              "name": "Heading",
+              "handle": "heading",
+              "required": 0,
+              "instructions": "",
+              "translationMethod": "site",
+              "translationKeyFormat": null,
+              "type": "craft\\fields\\PlainText",
+              "typesettings": {
+                "placeholder": "",
+                "code": "",
+                "multiline": "",
+                "initialRows": 4,
+                "charLimit": "",
+                "columnType": "text"
+              }
+            },
+            "new2": {
+              "name": "Text",
+              "handle": "text",
+              "required": 0,
+              "instructions": "",
+              "translationMethod": "site",
+              "translationKeyFormat": null,
+              "type": "craft\\redactor\\Field",
+              "typesettings": {
+                "redactorConfig": "",
+                "purifierConfig": "",
+                "cleanupHtml": true,
+                "removeInlineStyles": 1,
+                "removeEmptyTags": 1,
+                "removeNbsp": 1,
+                "purifyHtml": 1,
+                "columnType": "text",
+                "availableVolumes": "",
+                "availableTransforms": "*"
+              }
+            },
+            "new3": {
+              "name": "Images",
+              "handle": "images",
+              "required": 1,
+              "instructions": "",
+              "translationMethod": "site",
+              "translationKeyFormat": null,
+              "type": "craft\\fields\\Assets",
+              "typesettings": {
+                "useSingleFolder": "",
+                "defaultUploadLocationSource": "volume:d6e90518-f7a8-4bac-b5bf-77f62d8e5fcf",
+                "defaultUploadLocationSubpath": "",
+                "singleUploadLocationSource": "volume:d6e90518-f7a8-4bac-b5bf-77f62d8e5fcf",
+                "singleUploadLocationSubpath": "",
+                "restrictFiles": 1,
+                "allowedKinds": [
+                  "image"
+                ],
+                "sources": [
+                  "volume:d6e90518-f7a8-4bac-b5bf-77f62d8e5fcf"
+                ],
+                "source": null,
+                "targetSiteId": null,
+                "viewMode": "list",
+                "limit": "",
+                "selectionLabel": "Bild hinzuf\u00fcgen",
+                "localizeRelations": "",
+                "validateRelatedElements": ""
+              }
+            },
+            "new4": {
+              "name": "Orientation",
+              "handle": "orientation",
+              "required": 1,
+              "instructions": "",
+              "translationMethod": "site",
+              "translationKeyFormat": null,
+              "type": "craft\\fields\\Dropdown",
+              "typesettings": {
+                "optgroups": true,
+                "options": [
+                  {
+                    "label": "Text <-> Image",
+                    "value": "right",
+                    "default": 1
+                  },
+                  {
+                    "label": "Image <-> Text",
+                    "value": "left",
+                    "default": ""
+                  }
+                ]
+              }
+            },
+            "new5": {
+              "name": "Image Width",
+              "handle": "imgWidth",
+              "required": 1,
+              "instructions": "",
+              "translationMethod": "site",
+              "translationKeyFormat": null,
+              "type": "craft\\fields\\Dropdown",
+              "typesettings": {
+                "optgroups": true,
+                "options": [
+                  {
+                    "label": "Breit",
+                    "value": "wide",
+                    "default": 1
+                  },
+                  {
+                    "label": "Schmal",
+                    "value": "small",
+                    "default": ""
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "new5": {
+          "name": "Matrix Help",
+          "handle": "matrixhelp",
+          "fields": {
+            "new1": {
+              "name": "Include help text for matrix blocks?",
+              "handle": "includeMatrixhelp",
+              "required": 0,
+              "instructions": "",
+              "translationMethod": "site",
+              "translationKeyFormat": null,
+              "type": "craft\\fields\\Lightswitch",
+              "typesettings": {
+                "default": 1
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+]
