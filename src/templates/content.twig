@@ -1,0 +1,14 @@
+<div class="guide-cp">
+    <h1>{{ entry.title }}</h1>
+
+    {% if entry.guideContent.count() %}
+
+        <div><b>{{ entry.teaser }}</b></div>
+        <div >
+            {% include 'wsguide/blocks.twig' with {blocks:entry.guideContent.all} %}
+        </div>
+
+    {% else %}
+        {% include  ["wsguide/content/#{entry.slug}.twig","wsguide/content/#{entry.slug}.md"] %}
+    {% endif %}
+</div>

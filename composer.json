@@ -1,0 +1,40 @@
+{
+  "name": "wsydney76/guide",
+  "description": "Enables User Guide",
+  "type": "craft-plugin",
+  "version": "1.0",
+  "keywords": [
+    "craft",
+    "cms",
+    "craftcms",
+    "craft-plugin",
+    "guide"
+  ],
+  "support": {
+    "docs": "https://github.com/wsydney76/guide/blob/master/README.md",
+    "issues": "https://github.com/wsydney76/guide/issues"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "wsydney76",
+      "homepage": "https://github.com/wsydney76"
+    }
+  ],
+  "require": {
+    "craftcms/cms": "^3.0.0-RC1"
+  },
+  "autoload": {
+    "psr-4": {
+      "wsydney76\\guide\\": "src/"
+    }
+  },
+  "extra": {
+    "name": "WS Guide",
+    "handle": "wsguide",
+    "hasCpSettings": false,
+    "hasCpSection": false,
+    "changelogUrl": "https://raw.githubusercontent.com/wsydney76/guide/master/CHANGELOG.md",
+    "class": "wsydney76\\guide\\Guide"
+  }
+}
