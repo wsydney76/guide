@@ -1,5 +1,9 @@
 # Guide Plugin
 
+Hint: Moved from module to plugin, as a temporary workaround before porting all of this to
+the 'official' guide plugin.
+
+
 # Setup Guide
 
 ## Plugins
