@@ -4,9 +4,18 @@
     {% if entry.guideContent.count() %}
 
         <div><b>{{ entry.teaser }}</b></div>
-        <div >
+        <div>
             {% include 'wsguide/blocks.twig' with {blocks:entry.guideContent.all} %}
         </div>
+
+    {% elseif entry.templateLocation == 'site' %}
+
+        {% set oldMode = craft.app.view.getTemplateMode() %}
+        {{ craft.app.view.setTemplateMode('site') }}
+
+        {% include  ["_guide/#{entry.slug}.twig", "_guide/#{entry.slug}.md"] %}
+
+        {% do craft.app.view.setTemplateMode(oldMode) %}
 
     {% else %}
         {% include  ["wsguide/content/#{entry.slug}.twig","wsguide/content/#{entry.slug}.md"] %}

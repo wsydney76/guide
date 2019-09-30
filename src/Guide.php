@@ -26,12 +26,12 @@ class Guide extends Plugin
     public function init()
     {
 
-        /*// Base template directory
+        // Base template directory for site
         Event::on(
             View::class,
-            View::EVENT_REGISTER_CP_TEMPLATE_ROOTS, function(RegisterTemplateRootsEvent $e) {
-            $e->roots['guide'] = $this->getBasePath() . DIRECTORY_SEPARATOR . 'templates';
-        });*/
+            View::EVENT_REGISTER_SITE_TEMPLATE_ROOTS, function(RegisterTemplateRootsEvent $e) {
+            $e->roots['wsguide'] = $this->getBasePath() . DIRECTORY_SEPARATOR . 'templates';
+        });
 
         // Set routes
         Event::on(
