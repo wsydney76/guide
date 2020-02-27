@@ -81,7 +81,7 @@ class Guide extends Plugin
         }
 
         // Register Edit Screen extensions
-        Craft::$app->view->hook('cp.entries.edit.details', function(&$context) {
+        Craft::$app->view->hook('cp.entries.edit.meta', function(&$context) {
             if ($context['entry'] != null) {
                 return Craft::$app->view->renderTemplate('wsguide/editorbutton.twig', ['entry' => $context['entry']]);
             }
